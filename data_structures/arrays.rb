@@ -1,14 +1,26 @@
-#arrays are ds that contains a group of elements of the same type.
+#arrays are ds that contains a group of homogeneous elements .
 
 my_integers = [1,2,3,4,5]
-puts my_integers [0] #1
-
-#push and pop elements in an array
 shopping_list = ["Pineapples", "Oranges","Mangoes", "Bananas"]
-puts shopping_list [3] #Bananas
+
+
+#Basic Operations 
+#1.Traverse
+shopping_list.each {|x| puts x }
+puts "Reading through my list one by one", shopping_list
+
+#2.Insert
 shopping_list.push("Kiwi")
-puts shopping_list.join(' ,')
-shopping_list << "One more fruit"
-puts shopping_list.join(' ,')
-shopping_list.pop 
-puts shopping_list.join(' ,')
+puts "After adding kiwi fruits, my shopping list is", shopping_list
+
+#3.Delete
+shopping_list.delete("Mangoes")
+puts "After buying mangoes, my shopping list is", shopping_list
+
+#4.Search
+x = shopping_list.include?'Oranges'
+puts "Trying to find Oranges in this list", x
+
+#5.Update
+shopping_list[1] = "Watermelon"
+puts "Watermelons are in season and oranges are not, let me update that", shopping_list
